@@ -5,11 +5,11 @@ module "helm" {
   images          = var.images
   set_values = [
     {
-      name  = "serviceAccount.server.name"
+      name  = "serviceAccount.name"
       value = var.service_account_name
     },
     {
-      name  = "serviceAccount.server.create"
+      name  = "serviceAccount.create"
       value = "false"
     },
   ]
