@@ -12,6 +12,10 @@ module "helm" {
       name  = "serviceAccount.create"
       value = "false"
     },
+    {
+      name  = "cloudWatch.logGroupName"
+      value = var.loggroup_name
+    }
   ]
   values = var.values
 }

@@ -79,3 +79,8 @@ variable "values" {
   type        = list(any)
   default     = []
 }
+
+variable "loggroup_name" {
+  description = "Log group name"
+  type        = string
+}
