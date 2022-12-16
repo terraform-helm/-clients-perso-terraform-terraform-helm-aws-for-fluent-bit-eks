@@ -1,5 +1,5 @@
 module "helm" {
-  source          = "github.com/terraform-helm/terraform-helm-aws-for-fluent-bit"
+  source          = "github.com/terraform-helm/terraform-helm-aws-for-fluent-bit?ref=v0.1"
   count           = var.install_helm ? 1 : 0
   release_version = var.release_version
   images          = var.images
