@@ -18,7 +18,7 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_helm"></a> [helm](#module\_helm) | github.com/terraform-helm/terraform-helm-aws-for-fluent-bit | n/a |
+| <a name="module_helm"></a> [helm](#module\_helm) | github.com/terraform-helm/terraform-helm-aws-for-fluent-bit | v0.1.1 |
 | <a name="module_role_sa"></a> [role\_sa](#module\_role\_sa) | github.com/littlejo/terraform-aws-role-eks.git | v0.1 |
 
 ## Resources
@@ -34,7 +34,7 @@
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_cluster_id"></a> [cluster\_id](#input\_cluster\_id) | EKS cluster name | `string` | n/a | yes |
-| <a name="input_images"></a> [images](#input\_images) | Map of images | `map(string)` | `{}` | no |
+| <a name="input_images"></a> [images](#input\_images) | Map of images | <pre>object({<br>    main = optional(string)<br>  })</pre> | <pre>{<br>  "main": null<br>}</pre> | no |
 | <a name="input_install_helm"></a> [install\_helm](#input\_install\_helm) | Do you want to install helm chart? | `bool` | `true` | no |
 | <a name="input_irsa_iam_role_name"></a> [irsa\_iam\_role\_name](#input\_irsa\_iam\_role\_name) | IAM role name for IRSA | `string` | `"eks-fluentbit"` | no |
 | <a name="input_kubernetes_namespace"></a> [kubernetes\_namespace](#input\_kubernetes\_namespace) | Namespace to install autoscaler pod | `string` | `"logging"` | no |

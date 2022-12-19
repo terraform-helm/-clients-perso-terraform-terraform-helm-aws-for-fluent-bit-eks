@@ -1,7 +1,11 @@
 variable "images" {
   description = "Map of images"
-  type        = map(string)
-  default     = {}
+  type = object({
+    main = optional(string)
+  })
+  default = {
+    main = null
+  }
 }
 
 variable "install_helm" {
